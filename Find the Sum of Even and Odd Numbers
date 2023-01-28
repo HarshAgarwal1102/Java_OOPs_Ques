@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Printing the Sum of ODD & EVEN places using only");
+		int sumE=0, sumO=0;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("\nEnter the number of elements in array: ");
+        int num = sc.nextInt();
+
+		int arr[] = new int[num];
+		System.out.println("\nEnter the number: ");
+        
+        for(int i = 0; i < num; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        
+        for(int i = 0; i < num; i++)
+        {
+            if(arr[i] % 2 == 0)
+            {
+                sumE = sumE + arr[i];
+            }
+            else
+            {
+                sumO = sumO + arr[i];
+            }
+        }
+        
+        System.out.println("\nSum of Even Numbers: "+sumE);
+        System.out.println("Sum of Odd Numbers: "+sumO);
+		
+	}
+}
